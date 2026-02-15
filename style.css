@@ -1,0 +1,51 @@
+body {
+    margin: 0;
+    font-family: Arial;
+    background: #f5f7fa;
+}
+
+header {
+    background: #0c2d48;
+    color: white;
+    text-align: center;
+    padding: 40px;
+}
+
+.logo {
+    width: 90px;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: #1e88e5;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+.about, .services, .contact {
+    padding: 40px;
+    text-align: center;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px #ccc;
+}
+
+footer {
+    background: #0c2d48;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
