@@ -1,24 +1,80 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>ZySecure IT Solutions</title>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ZySecure IT Solutions | CCTV, Networking & IT Support</title>
+
 <link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
 
-<header>
-  <img src="logo.png">
-  <h1>ZySecure IT Solutions</h1>
-  <p>IT Services | CCTV | Networking | Intercom | Server Support</p>
-</header>
+<!-- HEADER -->
 
-<div class="section">
-<h2>About Us</h2>
-<p>Delhi based IT service provider offering CCTV, Networking, Laptop Repair & Server Support.</p>
+<header>
+
+<div class="container header-flex">
+
+<div class="logo-area">
+
+<img src="logo.png" class="logo">
+
+<div>
+<h1>ZySecure IT Solutions</h1>
+<p>IT Services | CCTV | Networking | Server Support</p>
 </div>
 
+</div>
+
+<nav>
+<a href="#">Home</a>
+<a href="#services">Services</a>
+<a href="#contact">Contact</a>
+</nav>
+
+</div>
+
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+<h2>Professional IT Solutions in Delhi NCR</h2>
+
+<p>CCTV Installation | Networking | Server Support</p>
+
+<button onclick="openForm('General Inquiry')" class="main-btn">
+Get Free Consultation
+</button>
+
+</section>
+
+
+<!-- ABOUT -->
+
 <div class="section">
+
+<h2>About Us</h2>
+
+<p>
+Delhi based IT service provider offering CCTV, Networking, Laptop Repair & Server Support.
+</p>
+
+</div>
+
+
+<!-- SERVICES -->
+
+<div class="section" id="services">
+
 <h2>Our Services</h2>
 
 <div class="services">
@@ -26,85 +82,214 @@
 <div class="box">
 <h3>CCTV Installation</h3>
 <p>Complete CCTV setup for home & office</p>
-<button onclick="openForm('CCTV Installation')">Apply Now</button>
+<button onclick="openForm('CCTV Installation')" class="btn">
+Request Service
+</button>
 </div>
 
 <div class="box">
-<h3>Computer & Laptop Repair</h3>
+<h3>Laptop & Computer Repair</h3>
 <p>Hardware & software troubleshooting</p>
-<button onclick="openForm('Laptop Repair')">Apply Now</button>
+<button onclick="openForm('Laptop Repair')" class="btn">
+Request Service
+</button>
 </div>
 
 <div class="box">
 <h3>Networking Setup</h3>
 <p>LAN, WiFi, Router setup</p>
-<button onclick="openForm('Networking')">Apply Now</button>
+<button onclick="openForm('Networking')" class="btn">
+Request Service
+</button>
 </div>
 
 <div class="box">
 <h3>Intercom Systems</h3>
 <p>Office communication setup</p>
-<button onclick="openForm('Intercom')">Apply Now</button>
+<button onclick="openForm('Intercom')" class="btn">
+Request Service
+</button>
 </div>
 
 <div class="box">
 <h3>Server Support</h3>
 <p>Installation & maintenance</p>
-<button onclick="openForm('Server Support')">Apply Now</button>
+<button onclick="openForm('Server Support')" class="btn">
+Request Service
+</button>
 </div>
 
 <div class="box">
 <h3>IT Equipment Supply</h3>
 <p>Laptops, desktops, CCTV supply</p>
-<button onclick="openForm('Laptop Purchase')">Apply Now</button>
+<button onclick="openForm('Equipment Supply')" class="btn">
+Request Service
+</button>
 </div>
 
 </div>
+
 </div>
 
-<div class="section">
+
+<!-- CONTACT -->
+
+<div class="section contact" id="contact">
+
 <h2>Contact Us</h2>
+
 <p><b>Owner:</b> Nitin Kumar</p>
-<p><b>Location:</b> Delhi NCR</p>
+
 <p><b>Phone:</b> 7859817062</p>
+
 <p><b>Email:</b> support@zysecureit.in</p>
+
+<p><b>Location:</b> Delhi NCR</p>
+
 </div>
+
 
 <footer>
 © 2026 ZySecure IT Solutions
 </footer>
 
+
+
 <!-- POPUP FORM -->
+
 <div id="popup">
+
 <div class="form-box">
+
 <h3>Service Request</h3>
 
 <form action="https://formsubmit.co/support@zysecureit.in" method="POST">
+
 <input type="hidden" name="Service" id="serviceName">
 
 <input type="text" name="Name" placeholder="Your Name" required>
+
 <input type="tel" name="Phone" placeholder="Phone Number" required>
+
 <input type="email" name="Email" placeholder="Your Email ID" required>
-<input type="text" name="Laptop/Service" placeholder="Which service or laptop?" required>
+
+<input type="text" name="Service Details" placeholder="Which service?" required>
+
 <textarea name="Details" placeholder="Extra details"></textarea>
 
-<button type="submit">Submit</button>
+<button type="submit" class="submit-btn">
+Submit Request
+</button>
+
 </form>
 
-<br>
-<button onclick="closeForm()">Close</button>
-</div>
+<button onclick="closeForm()" class="close-btn">
+Close
+</button>
+
 </div>
 
+</div>
+
+
+
+<!-- FLOATING BUTTONS -->
+
+<div class="floating-buttons">
+
+<a href="https://wa.me/917859817062" target="_blank" class="whatsapp-btn">
+💬
+</a>
+
+<div class="chat-btn" onclick="toggleChat()">
+🤖
+</div>
+
+</div>
+
+
+
+<!-- CHAT BOX -->
+
+<div class="chat-box" id="chatBox">
+
+<div class="chat-header">
+ZySecure Support
+</div>
+
+<div class="chat-body" id="chatBody">
+
+<div class="bot">
+Hello 👋 Welcome to ZySecure IT Solutions.<br>
+How can I help you?
+</div>
+
+</div>
+
+<div class="chat-input">
+
+<input type="text" id="msg" placeholder="Type message...">
+
+<button onclick="sendMsg()">Send</button>
+
+</div>
+
+</div>
+
+
+
 <script>
-function openForm(service) {
-  document.getElementById("popup").style.display="block";
-  document.getElementById("serviceName").value = service;
+
+/* popup */
+
+function openForm(service)
+{
+document.getElementById("popup").style.display="flex";
+document.getElementById("serviceName").value=service;
 }
-function closeForm() {
-  document.getElementById("popup").style.display="none";
+
+function closeForm()
+{
+document.getElementById("popup").style.display="none";
 }
+
+
+/* chat */
+
+function toggleChat()
+{
+let box=document.getElementById("chatBox");
+
+if(box.style.display==="block")
+box.style.display="none";
+else
+box.style.display="block";
+}
+
+function sendMsg()
+{
+
+let input=document.getElementById("msg");
+
+let text=input.value;
+
+if(text==="") return;
+
+let body=document.getElementById("chatBody");
+
+body.innerHTML+=`<div class="user">${text}</div>`;
+
+setTimeout(()=>{
+body.innerHTML+=`<div class="bot">Please call or WhatsApp 7859817062 for more details.</div>`;
+body.scrollTop=body.scrollHeight;
+},500);
+
+input.value="";
+
+}
+
 </script>
+
 
 </body>
 </html>
