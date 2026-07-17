@@ -1,196 +1,310 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>ZySecure IT Solutions | CCTV, Networking & IT Support</title>
-
-<link rel="stylesheet" href="style.css">
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZY Secure IT Solutions</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* साफ़ और प्रीमियम सर्विसेज़ सेक्शन की स्टाइलिंग */
+        .detailed-addon-section {
+            background: #0e223d;
+            color: #fff;
+            padding: 60px 0;
+            margin: 40px 0;
+        }
+        .addon-grid {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .addon-card {
+            background: #fff;
+            color: #333;
+            border-radius: 6px;
+            padding: 40px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .addon-card h2 {
+            color: #0e223d;
+            font-size: 24px;
+            margin-bottom: 25px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #f0f0f0;
+            text-align: center;
+        }
+        .check-list {
+            list-style: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+        }
+        .check-list li {
+            font-size: 15px;
+            padding-left: 25px;
+            position: relative;
+            color: #444;
+            font-weight: bold;
+        }
+        .check-list li::before {
+            content: "✓";
+            color: #ff6600;
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+            font-size: 16px;
+        }
+        .brands-bar {
+            max-width: 1200px;
+            margin: 50px auto 0;
+            padding: 30px 20px 0;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            text-align: center;
+        }
+        .brands-bar h4 {
+            color: #fff;
+            font-size: 18px;
+            margin-bottom: 25px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .brands-flex {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        .brand-pill {
+            padding: 12px 30px;
+            background: #fff;
+            color: #0e223d;
+            border-radius: 4px;
+            font-size: 14px;
+            font-weight: bold;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        /* द्विभाषी About Section की स्टाइलिंग */
+        .about-lang-block {
+            margin-bottom: 25px;
+        }
+        .about-lang-block h3 {
+            color: #ff6600;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        .about-lang-block p {
+            font-size: 15px;
+            line-height: 1.6;
+            color: #444;
+        }
+        /* कांटेक्ट इन्फो के लिए एक्स्ट्रा स्टाइलिंग */
+        .contact-info-wrapper {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .contact-info-item {
+            display: inline-block;
+            margin: 0 15px;
+            font-size: 16px;
+            color: #0e223d;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .contact-info-item i {
+            color: #ff6600;
+            margin-right: 8px;
+        }
+        .contact-info-item:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
-
 <body>
 
-<!-- HEADER -->
-
-<header>
-
-<div class="container header-flex">
-
-<div class="logo-area">
-
-<img src="logo.png" class="logo">
-
-<div>
-<h1>ZySecure IT Solutions</h1>
-<p>IT Services | CCTV | Networking | Server Support</p>
-</div>
-
-</div>
-
-<nav>
-<a href="#">Home</a>
-<a href="#services">Services</a>
-<a href="#contact">Contact</a>
-</nav>
-
-</div>
-
-</header>
-
-
-<!-- HERO -->
-
-<section class="hero">
-
-<h2>Professional IT Solutions in Delhi NCR</h2>
-
-<p>CCTV Installation | Networking | Server Support</p>
-
-<button onclick="openForm('General Inquiry')" class="main-btn">
-Get Free Consultation
-</button>
-
-</section>
-
-
-<!-- ABOUT -->
-
-<div class="section">
-
-<h2>About Us</h2>
-
-<p>
-Delhi based IT service provider offering CCTV, Networking, Laptop Repair & Server Support.
-</p>
-
-</div>
-
-
-<!-- SERVICES -->
-
-<div class="section" id="services">
-
-<h2>Our Services</h2>
-
-<div class="services">
-
-<div class="box">
-<h3>CCTV Installation</h3>
-<p>Complete CCTV setup for home & office</p>
-<button onclick="openForm('CCTV Installation')" class="btn">
-Request Service
-</button>
-</div>
-
-<div class="box">
-<h3>Laptop & Computer Repair</h3>
-<p>Hardware & software troubleshooting</p>
-<button onclick="openForm('Laptop Repair')" class="btn">
-Request Service
-</button>
-</div>
-
-<div class="box">
-<h3>Networking Setup</h3>
-<p>LAN, WiFi, Router setup</p>
-<button onclick="openForm('Networking')" class="btn">
-Request Service
-</button>
-</div>
-
-<div class="box">
-<h3>Intercom Systems</h3>
-<p>Office communication setup</p>
-<button onclick="openForm('Intercom')" class="btn">
-Request Service
-</button>
-</div>
-
-<div class="box">
-<h3>Server Support</h3>
-<p>Installation & maintenance</p>
-<button onclick="openForm('Server Support')" class="btn">
-Request Service
-</button>
-</div>
-
-<div class="box">
-<h3>IT Equipment Supply</h3>
-<p>Laptops, desktops, CCTV supply</p>
-<button onclick="openForm('Equipment Supply')" class="btn">
-Request Service
-</button>
-</div>
-
-</div>
-
-</div>
-
-
-<!-- CONTACT -->
-
-<div class="section contact" id="contact">
-
-<h2>Contact Us</h2>
-
-<p><b>Email:</b> support@zysecureit.in</p>
-
-<p><b>Location:</b> Delhi NCR</p>
-
-</div>     
-
-
-<footer>
-© 2026 ZySecure IT Solutions
-</footer>
-
-
-
-<!-- POPUP FORM -->
-
-<div id="popup">
-
-<div class="form-box">
-
-<h3>Service Request</h3>
-
-<form action="https://formsubmit.co/support@zysecureit.in" method="POST">
-
-<input type="hidden" name="Service" id="serviceName">
-
-<input type="text" name="Name" placeholder="Your Name" required>
-
-<input type="tel" name="Phone" placeholder="Phone Number" required>
-
-<input type="email" name="Email" placeholder="Your Email ID" required>
-
-<input type="text" name="Service Details" placeholder="Which service?" required>
-
-<textarea name="Details" placeholder="Extra details"></textarea>
-
-<button type="submit" class="submit-btn">
-Submit Request
-</button>
-
-</form>
-
-<button onclick="closeForm()" class="close-btn">
-Close
-</button>
-
-</div>
-
-</div>
-
-</div>
-
-
-
+    <!-- Header / Navbar -->
+    <header>
+        <div class="logo-area">
+            <img src="logo.png" alt="ZY Secure IT Solutions" class="brand-logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Home / Hero Banner Section -->
+    <section id="home" class="hero-banner">
+        <div class="hero-content">
+            <h1>Professional IT Solutions in Delhi NCR:<br><span>NVR, IP Cameras, and Server Support</span></h1>
+            <a href="#contact" class="btn-quote">Get A Quote Today</a>
+        </div>
+    </section>
+
+    <!-- Services Cards Section -->
+    <section id="services" class="services-section">
+        <div class="container">
+            
+            <!-- Card 1: Barcode Printer -->
+            <div class="service-card">
+                <div class="card-image-container">
+                    <img src="barcode-banner.png" alt="ZY Secure Barcode Solutions" class="service-banner-img">
+                </div>
+                <div class="card-content-area">
+                    <div class="card-icon">
+                        <i class="fa-solid fa-print"></i>
+                    </div>
+                    <h3>Barcode Printer Solutions</h3>
+                    <ul>
+                        <li><i class="fa-solid fa-chevron-right"></i> High-Quality Industrial Printers</li>
+                        <li><i class="fa-solid fa-chevron-right"></i> Thermal & Label Printing</li>
+                        <li><i class="fa-solid fa-chevron-right"></i> Barcode Supplies & Maintenance</li>
+                        <li><i class="fa-solid fa-chevron-right"></i> System Integration</li>
+                    </ul>
+                    <a href="#contact" class="btn-learn">Learn More</a>
+                </div>
+            </div>
+
+            <!-- Card 2: IP Camera & NVR -->
+            <div class="service-card">
+                <div class="card-image-container">
+                    <img src="cctv-banner.png" alt="ZY Secure IP Camera Installation" class="service-banner-img">
+                </div>
+                <div class="card-content-area">
+                    <div class="card-icon">
+                        <i class="fa-solid fa-video"></i>
+                    </div>
+                    <h3>IP Camera & NVR Solutions</h3>
+                    <ul>
+                        <li><i class="fa-solid fa-chevron-right"></i> Network Video Recording</li>
+                        <li><i class="fa-solid fa-chevron-right"></i> IP Surveillance Systems</li>
+                        <li><i class="fa-solid fa-chevron-right"></i> Remote Monitoring & Mobile Access</li>
+                        <li><i class="fa-solid fa-chevron-right"></i> CCTV Installation & Maintenance</li>
+                    </ul>
+                    <a href="#contact" class="btn-learn">Learn More</a>
+                </div>
+            </div>
+
+            <!-- Card 3: Computer, Laptop & Network Solutions -->
+            <div class="service-card">
+                <div class="card-image-container">
+                    <img src="1.png" alt="Computer & Network Solutions" class="service-banner-img">
+                </div>
+                <div class="card-content-area">
+                    <div class="card-icon">
+                        <i class="fa-solid fa-laptop"></i>
+                    </div>
+                    <h3>Computer & IT Support</h3>
+                    <ul>
+                        <li><i class="fa-solid fa-desktop"></i> Hardware Sales & Upgrades</li>
+                        <li><i class="fa-solid fa-server"></i> Server Configuration & Setup</li>
+                        <li><i class="fa-solid fa-network-wired"></i> Corporate IT & Network Support</li>
+                        <li><i class="fa-solid fa-tools"></i> Laptop & System Troubleshooting</li>
+                    </ul>
+                    <a href="#contact" class="btn-learn">Learn More</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- क्लीन सर्विसेज लिस्ट और लीडिंग ब्रांड्स का सेक्शन -->
+    <section class="detailed-addon-section">
+        <div class="addon-grid">
+            
+            <div class="addon-card">
+                <h2>Our Core IT Services</h2>
+                <ul class="check-list">
+                    <li>Hardware Sales & Service</li>
+                    <li>Printer Setup & Troubleshooting</li>
+                    <li>Barcode Scanner Integration</li>
+                    <li>Network Architecture & Security</li>
+                    <li>Data Backup Solutions</li>
+                    <li>Remote IT Support & AMC</li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="brands-bar">
+            <h4>We Deal In All Leading Brands</h4>
+            <div class="brands-flex">
+                <div class="brand-pill">TSC</div>
+                <div class="brand-pill">ZEBRA</div>
+                <div class="brand-pill">HONEYWELL</div>
+                <div class="brand-pill">CITIZEN</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="about-section" style="background: #f8fafc; padding: 60px 0;">
+        <div class="about-content" style="max-width: 900px; margin: 0 auto; padding: 0 20px; text-align: left;">
+            <h2 style="text-align: center; color: #0e223d; font-size: 28px; margin-bottom: 30px;">About ZY Secure IT Solutions</h2>
+            
+            <!-- English Description -->
+            <div class="about-lang-block">
+                <h3><i class="fa-solid fa-globe"></i> Corporate Overview</h3>
+                <p>We are a premier IT solutions provider in Delhi NCR, specializing in robust surveillance infrastructure, professional barcode printing configurations, and comprehensive corporate IT architecture. Our expert team ensures that server networks, security protocols, hardware installations, and tech systems operate flawlessly with uninterrupted 24/7 technical assistance.</p>
+            </div>
+            
+            <hr style="border: 0; border-top: 1px dashed #cbd5e1; margin: 20px 0;">
+
+            <!-- Hindi Description -->
+            <div class="about-lang-block">
+                <h3><i class="fa-solid fa-circle-check"></i> हमारी सेवाएँ और परिचय</h3>
+                <p>हम दिल्ली एनसीआर में एक अग्रणी आईटी सॉल्यूशंस प्रोवाइडर हैं, जो हाई-क्वालिटी सर्विलांस सिस्टम (CCTV/NVR), बारकोड प्रिंटिंग इंफ्रास्ट्रक्चर और संपूर्ण कॉर्पोरेट व रिटेल आईटी नेटवर्क सपोर्ट में विशेषज्ञता रखते हैं। हमारी टीम यह सुनिश्चित करती है कि आपका पूरा network इंफ्रास्ट्रक्चर, सर्वर सेटअप, डिजिटल सिक्योरिटी और हार्डवेयर बिना किसी रुकावट के 24/7 सुचारू रूप से काम करते रहें।</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section (ईमेल और इंस्टाग्राम आईडी के साथ अपडेटेड) -->
+    <section id="contact" class="contact-section" style="padding: 60px 0;">
+        <h2>Request a Quote / Contact Us</h2>
+        
+        <!-- डायरेक्ट कांटेक्ट लिंक्स (Mail & Instagram) -->
+        <div class="contact-info-wrapper">
+            <a href="mailto:support@zysecureit.in" class="contact-info-item">
+                <i class="fa-solid fa-envelope"></i> support@zysecureit.in
+            </a>
+            <a href="https://instagram.com/zysecureit" target="_blank" class="contact-info-item">
+                <i class="fa-brands fa-instagram"></i> @zysecureit
+            </a>
+        </div>
+        
+        <!-- ईमेल भेजने के लिए Web3Forms का एक्टिव फॉर्म -->
+        <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+            
+            <input type="hidden" name="access_key" value="252313cf-d5a0-44de-bc01-1ba03115db3e">
+            
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Tell us about your requirement (e.g., CCTV setup, Server support, Network installation)" rows="5" required></textarea>
+            
+            <!-- मैसेज जाने के बाद यूजर को री-डायरेक्ट करने के लिए -->
+            <input type="hidden" name="redirect" value="https://web3forms.com/success">
+
+            <button type="submit" class="btn-submit">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-links">
+            <a href="#about">About Us</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact Info</a>
+        </div>
+        <div class="copyright">
+            &copy; 2026 ZY Secure IT Solutions. All Rights Reserved.
+        </div>
+    </footer>
 
 </body>
 </html>
