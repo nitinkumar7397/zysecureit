@@ -107,7 +107,7 @@
         }
         .contact-info-item {
             display: inline-block;
-            margin: 0 15px;
+            margin: 10px 15px;
             font-size: 16px;
             color: #0e223d;
             font-weight: bold;
@@ -119,6 +119,14 @@
         }
         .contact-info-item:hover {
             text-decoration: underline;
+        }
+        /* हेडर कॉल बटन स्टाइलिंग */
+        .header-phone {
+            background: #ff6600;
+            color: #fff !important;
+            padding: 8px 15px;
+            border-radius: 4px;
+            font-weight: bold;
         }
     </style>
 </head>
@@ -135,6 +143,8 @@
                 <li><a href="#about">About Us</a></li>
                 <li><a href="#services">Services</a></li>
                 <li><a href="#contact">Contact</a></li>
+                <!-- Header Direct Call Button -->
+                <li><a href="tel:7859817062" class="header-phone"><i class="fa-solid fa-phone"></i> +91 7859817062</a></li>
             </ul>
         </nav>
     </header>
@@ -264,12 +274,18 @@
         </div>
     </section>
 
-    <!-- Contact Section (ईमेल और इंस्टाग्राम आईडी के साथ अपडेटेड) -->
+    <!-- Contact Section (फ़ोन नंबर, ईमेल और इंस्टाग्राम आईडी के साथ अपडेटेड) -->
     <section id="contact" class="contact-section" style="padding: 60px 0;">
         <h2>Request a Quote / Contact Us</h2>
         
-        <!-- डायरेक्ट कांटेक्ट लिंक्स (Mail & Instagram) -->
+        <!-- डायरेक्ट कांटेक्ट लिंक्स (Call, Mail & Instagram) -->
         <div class="contact-info-wrapper">
+            <a href="tel:7859817062" class="contact-info-item">
+                <i class="fa-solid fa-phone"></i> +91 7859817062
+            </a>
+            <a href="https://wa.me/917859817062" target="_blank" class="contact-info-item">
+                <i class="fa-brands fa-whatsapp"></i> WhatsApp Us
+            </a>
             <a href="mailto:support@zysecureit.in" class="contact-info-item">
                 <i class="fa-solid fa-envelope"></i> support@zysecureit.in
             </a>
@@ -285,6 +301,7 @@
             
             <input type="text" name="name" placeholder="Your Name" required>
             <input type="email" name="email" placeholder="Your Email" required>
+            <input type="tel" name="phone" placeholder="Your Phone Number" required>
             <textarea name="message" placeholder="Tell us about your requirement (e.g., CCTV setup, Server support, Network installation)" rows="5" required></textarea>
             
             <!-- मैसेज जाने के बाद यूजर को री-डायरेक्ट करने के लिए -->
