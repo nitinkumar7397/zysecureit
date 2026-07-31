@@ -8,6 +8,95 @@
     <!-- FontAwesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
+        /* ग्रिड और कार्ड्स का बेहतरीन अलाइनमेंट */
+        .services-section {
+            padding: 50px 20px;
+            background: #f8fafc;
+        }
+        .services-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 25px;
+        }
+        .service-card {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            width: 320px;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+        .card-image-container {
+            width: 100%;
+            height: 200px;
+            background: #e2e8f0;
+            overflow: hidden;
+        }
+        .service-banner-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .card-content-area {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            text-align: center;
+        }
+        .card-icon {
+            font-size: 28px;
+            color: #ff6600;
+            margin-bottom: 10px;
+        }
+        .card-content-area h3 {
+            color: #0e223d;
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+        .card-content-area ul {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 20px 0;
+            text-align: left;
+            flex-grow: 1;
+        }
+        .card-content-area ul li {
+            font-size: 13px;
+            color: #555;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+        }
+        .card-content-area ul li i {
+            color: #ff6600;
+            margin-right: 8px;
+            font-size: 10px;
+        }
+        .btn-learn {
+            display: block;
+            background: #0e223d;
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 0;
+            border-radius: 4px;
+            font-weight: bold;
+            font-size: 14px;
+            transition: background 0.3s;
+            margin-top: auto;
+        }
+        .btn-learn:hover {
+            background: #ff6600;
+        }
+
         /* साफ़ और प्रीमियम सर्विसेज़ सेक्शन की स्टाइलिंग */
         .detailed-addon-section {
             background: #0e223d;
@@ -86,7 +175,6 @@
             font-weight: bold;
             box-shadow: 0 4px 10px rgba(0,0,0,0.1);
         }
-        /* द्विभाषी About Section की स्टाइलिंग */
         .about-lang-block {
             margin-bottom: 25px;
         }
@@ -100,7 +188,6 @@
             line-height: 1.6;
             color: #444;
         }
-        /* कांटेक्ट इन्फो के लिए एक्स्ट्रा स्टाइलिंग */
         .contact-info-wrapper {
             text-align: center;
             margin-bottom: 30px;
@@ -120,7 +207,6 @@
         .contact-info-item:hover {
             text-decoration: underline;
         }
-        /* हेडर कॉल बटन स्टाइलिंग */
         .header-phone {
             background: #ff6600;
             color: #fff !important;
@@ -143,7 +229,6 @@
                 <li><a href="#about">About Us</a></li>
                 <li><a href="#services">Services</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <!-- Header Direct Call Button -->
                 <li><a href="tel:7859817062" class="header-phone"><i class="fa-solid fa-phone"></i> +91 7859817062</a></li>
             </ul>
         </nav>
@@ -152,24 +237,22 @@
     <!-- Home / Hero Banner Section -->
     <section id="home" class="hero-banner">
         <div class="hero-content">
-            <h1>Professional IT Solutions in Delhi NCR:<br><span>NVR, IP Cameras, and Server Support</span></h1>
+            <h1>Professional IT Solutions in Delhi NCR:<br><span>NVR, IP Cameras, IP Phones & Software Support</span></h1>
             <a href="#contact" class="btn-quote">Get A Quote Today</a>
         </div>
     </section>
 
     <!-- Services Cards Section -->
     <section id="services" class="services-section">
-        <div class="container">
+        <div class="services-container">
             
             <!-- Card 1: Barcode Printer -->
             <div class="service-card">
                 <div class="card-image-container">
-                    <img src="barcode-banner.png" alt="ZY Secure Barcode Solutions" class="service-banner-img">
+                    <img src="barcode-banner.png" alt="Barcode Solutions" class="service-banner-img">
                 </div>
                 <div class="card-content-area">
-                    <div class="card-icon">
-                        <i class="fa-solid fa-print"></i>
-                    </div>
+                    <div class="card-icon"><i class="fa-solid fa-print"></i></div>
                     <h3>Barcode Printer Solutions</h3>
                     <ul>
                         <li><i class="fa-solid fa-chevron-right"></i> High-Quality Industrial Printers</li>
@@ -184,12 +267,10 @@
             <!-- Card 2: IP Camera & NVR -->
             <div class="service-card">
                 <div class="card-image-container">
-                    <img src="cctv-banner.png" alt="ZY Secure IP Camera Installation" class="service-banner-img">
+                    <img src="cctv-banner.png" alt="IP Camera Installation" class="service-banner-img">
                 </div>
                 <div class="card-content-area">
-                    <div class="card-icon">
-                        <i class="fa-solid fa-video"></i>
-                    </div>
+                    <div class="card-icon"><i class="fa-solid fa-video"></i></div>
                     <h3>IP Camera & NVR Solutions</h3>
                     <ul>
                         <li><i class="fa-solid fa-chevron-right"></i> Network Video Recording</li>
@@ -201,21 +282,56 @@
                 </div>
             </div>
 
-            <!-- Card 3: Computer, Laptop & Network Solutions -->
+            <!-- Card 3: Computer Support -->
             <div class="service-card">
                 <div class="card-image-container">
                     <img src="1.png" alt="Computer & Network Solutions" class="service-banner-img">
                 </div>
                 <div class="card-content-area">
-                    <div class="card-icon">
-                        <i class="fa-solid fa-laptop"></i>
-                    </div>
+                    <div class="card-icon"><i class="fa-solid fa-laptop"></i></div>
                     <h3>Computer & IT Support</h3>
                     <ul>
-                        <li><i class="fa-solid fa-desktop"></i> Hardware Sales & Upgrades</li>
-                        <li><i class="fa-solid fa-server"></i> Server Configuration & Setup</li>
-                        <li><i class="fa-solid fa-network-wired"></i> Corporate IT & Network Support</li>
-                        <li><i class="fa-solid fa-tools"></i> Laptop & System Troubleshooting</li>
+                        <li><i class="fa-solid fa-chevron-right"></i> Hardware Sales & Upgrades</li>
+                        <li><i class="fa-solid fa-chevron-right"></i> Server Configuration & Setup</li>
+                        <li><i class="fa-solid fa-chevron-right"></i> Corporate IT & Network Support</li>
+                        <li><i class="fa-solid fa-chevron-right"></i> Laptop & System Troubleshooting</li>
+                    </ul>
+                    <a href="#contact" class="btn-learn">Learn More</a>
+                </div>
+            </div>
+
+            <!-- Card 4: IP Phone -->
+            <div class="service-card">
+                <div class="card-image-container">
+                    <img src="ipphone-banner.png" alt="IP Phone Solutions" class="service-banner-img">
+                </div>
+                <div class="card-content-area">
+                    <div class="card-icon"><i class="fa-solid fa-phone-volume"></i></div>
+                    <h3>IP Phone & PBX Solutions</h3>
+                    <ul>
+                        <li><i class="fa-solid fa-chevron-right"></i> IP Phone Systems & Intercom</li>
+                        <li><i class="fa-solid fa-chevron-right"></i> IP PBX Server Configuration</li>
+                        <li><i class="fa-solid fa-chevron-right"></i> Corporate VoIP Network Setup</li>
+                        <li><i class="fa-solid fa-chevron-right"></i> Call Management & Maintenance</li>
+                    </ul>
+                    <a href="#contact" class="btn-learn">Learn More</a>
+                </div>
+            </div>
+
+            <!-- Card 5: Windows & Software -->
+            <div class="service-card">
+                <div class="card-image-container">
+                    <!-- ध्यान दें: यहाँ इमेज फाइल नाम अपने फोल्डर के हिसाब से रख लें (जैसे software-banner.jpg या png) -->
+                    <img src="software-banner.png" alt="Windows and Software Installation" class="service-banner-img">
+                </div>
+                <div class="card-content-area">
+                    <div class="card-icon"><i class="fa-brands fa-windows"></i></div>
+                    <h3>Windows & Software Installation</h3>
+                    <ul>
+                        <li><i class="fa-solid fa-chevron-right"></i> Original Windows 10/11 Setup</li>
+                        <li><i class="fa-solid fa-chevron-right"></i> MS Office & Business App Setup</li>
+                        <li><i class="fa-solid fa-chevron-right"></i> Antivirus & Security Protection</li>
+                        <li><i class="fa-solid fa-chevron-right"></i> Driver Updates & System Tuning</li>
                     </ul>
                     <a href="#contact" class="btn-learn">Learn More</a>
                 </div>
@@ -227,28 +343,33 @@
     <!-- क्लीन सर्विसेज लिस्ट और लीडिंग ब्रांड्स का सेक्शन -->
     <section class="detailed-addon-section">
         <div class="addon-grid">
-            
             <div class="addon-card">
                 <h2>Our Core IT Services</h2>
                 <ul class="check-list">
                     <li>Hardware Sales & Service</li>
                     <li>Printer Setup & Troubleshooting</li>
                     <li>Barcode Scanner Integration</li>
+                    <li>IP PBX & IP Phone Setup</li>
+                    <li>Windows & Software Installation</li>
                     <li>Network Architecture & Security</li>
+                    <li>Antivirus & System Protection</li>
                     <li>Data Backup Solutions</li>
                     <li>Remote IT Support & AMC</li>
                 </ul>
             </div>
-
         </div>
 
         <div class="brands-bar">
             <h4>We Deal In All Leading Brands</h4>
             <div class="brands-flex">
+                <div class="brand-pill">MICROSOFT</div>
                 <div class="brand-pill">TSC</div>
                 <div class="brand-pill">ZEBRA</div>
                 <div class="brand-pill">HONEYWELL</div>
                 <div class="brand-pill">CITIZEN</div>
+                <div class="brand-pill">METRIX</div>
+                <div class="brand-pill">ALCATEL</div>
+                <div class="brand-pill">GRANDSTREAM</div>
             </div>
         </div>
     </section>
@@ -257,56 +378,36 @@
     <section id="about" class="about-section" style="background: #f8fafc; padding: 60px 0;">
         <div class="about-content" style="max-width: 900px; margin: 0 auto; padding: 0 20px; text-align: left;">
             <h2 style="text-align: center; color: #0e223d; font-size: 28px; margin-bottom: 30px;">About ZY Secure IT Solutions</h2>
-            
-            <!-- English Description -->
             <div class="about-lang-block">
                 <h3><i class="fa-solid fa-globe"></i> Corporate Overview</h3>
-                <p>We are a premier IT solutions provider in Delhi NCR, specializing in robust surveillance infrastructure, professional barcode printing configurations, and comprehensive corporate IT architecture. Our expert team ensures that server networks, security protocols, hardware installations, and tech systems operate flawlessly with uninterrupted 24/7 technical assistance.</p>
+                <p>We are a premier IT solutions provider in Delhi NCR, specializing in robust surveillance infrastructure, professional IP Phone / PBX setups, Windows & software deployment, barcode printing configurations, and comprehensive corporate IT architecture.</p>
             </div>
-            
             <hr style="border: 0; border-top: 1px dashed #cbd5e1; margin: 20px 0;">
-
-            <!-- Hindi Description -->
             <div class="about-lang-block">
                 <h3><i class="fa-solid fa-circle-check"></i> हमारी सेवाएँ और परिचय</h3>
-                <p>हम दिल्ली एनसीआर में एक अग्रणी आईटी सॉल्यूशंस प्रोवाइडर हैं, जो हाई-क्वालिटी सर्विलांस सिस्टम (CCTV/NVR), बारकोड प्रिंटिंग इंफ्रास्ट्रक्चर और संपूर्ण कॉर्पोरेट व रिटेल आईटी नेटवर्क सपोर्ट में विशेषज्ञता रखते हैं। हमारी टीम यह सुनिश्चित करती है कि आपका पूरा network इंफ्रास्ट्रक्चर, सर्वर सेटअप, डिजिटल सिक्योरिटी और हार्डवेयर बिना किसी रुकावट के 24/7 सुचारू रूप से काम करते रहें।</p>
+                <p>हम दिल्ली एनसीआर में एक अग्रणी आईटी सॉल्यूशंस प्रोवाइडर हैं, जो हाई-क्वालिटी सर्विलांस सिस्टम (CCTV/NVR), आईपी फोन और पीबीएक्स सिस्टम (IP Phone / PBX), विंडोज व सॉफ्टवेयर इंस्टॉलेशन (Windows OS & Software Setup), बारकोड प्रिंटिंग इंफ्रास्ट्रक्चर और संपूर्ण कॉर्पोरेट व रिटेल आईटी नेटवर्क सपोर्ट में विशेषज्ञता रखते हैं।</p>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section (फ़ोन नंबर, ईमेल और इंस्टाग्राम आईडी के साथ अपडेटेड) -->
+    <!-- Contact Section -->
     <section id="contact" class="contact-section" style="padding: 60px 0;">
         <h2>Request a Quote / Contact Us</h2>
-        
-        <!-- डायरेक्ट कांटेक्ट लिंक्स (Call, Mail & Instagram) -->
         <div class="contact-info-wrapper">
-            <a href="tel:7859817062" class="contact-info-item">
-                <i class="fa-solid fa-phone"></i> +91 7859817062
-            </a>
-            <a href="https://wa.me/917859817062" target="_blank" class="contact-info-item">
-                <i class="fa-brands fa-whatsapp"></i> WhatsApp Us
-            </a>
-            <a href="mailto:support@zysecureit.in" class="contact-info-item">
-                <i class="fa-solid fa-envelope"></i> support@zysecureit.in
-            </a>
-            <a href="https://instagram.com/zysecureit" target="_blank" class="contact-info-item">
-                <i class="fa-brands fa-instagram"></i> @zysecureit
-            </a>
+            <a href="tel:7859817062" class="contact-info-item"><i class="fa-solid fa-phone"></i> +91 7859817062</a>
+            <a href="https://wa.me/917859817062" target="_blank" class="contact-info-item"><i class="fa-brands fa-whatsapp"></i> WhatsApp Us</a>
+            <a href="mailto:support@zysecureit.in" class="contact-info-item"><i class="fa-solid fa-envelope"></i> support@zysecureit.in</a>
+            <a href="https://instagram.com/zysecureit" target="_blank" class="contact-info-item"><i class="fa-brands fa-instagram"></i> @zysecureit</a>
+            <a class="contact-info-item" href="https://www.youtube.com/@ZYSECUREITSOLUTIONS" target="_blank"><i class="fa-brands fa-youtube"></i> YouTube Channel</a>
+
         </div>
-        
-        <!-- ईमेल भेजने के लिए Web3Forms का एक्टिव फॉर्म -->
         <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
-            
             <input type="hidden" name="access_key" value="252313cf-d5a0-44de-bc01-1ba03115db3e">
-            
             <input type="text" name="name" placeholder="Your Name" required>
             <input type="email" name="email" placeholder="Your Email" required>
             <input type="tel" name="phone" placeholder="Your Phone Number" required>
-            <textarea name="message" placeholder="Tell us about your requirement (e.g., CCTV setup, Server support, Network installation)" rows="5" required></textarea>
-            
-            <!-- मैसेज जाने के बाद यूजर को री-डायरेक्ट करने के लिए -->
+            <textarea name="message" placeholder="Tell us about your requirement..." rows="5" required></textarea>
             <input type="hidden" name="redirect" value="https://web3forms.com/success">
-
             <button type="submit" class="btn-submit">Send Message</button>
         </form>
     </section>
